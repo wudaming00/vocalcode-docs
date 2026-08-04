@@ -79,3 +79,22 @@ find it, mail **support@vocalcode.app**.
 Yes. The Windows installer is Authenticode-signed and the macOS build is notarized.
 The one-click updater checks both the published file hash and the signature before
 it will run an installer.
+
+## Is VocalCode the same as VoiceCode?
+
+No. They are unrelated products whose names are one letter apart, which causes real confusion.
+
+**VoiceCode** ([voicecode.dev](https://www.voicecode.dev/)) is an AI voice interface for editors — you
+describe an edit in plain English and it writes the code, shown as a diff to accept. It supports VS Code,
+Cursor, Neovim, JetBrains and Zed, and is in private beta at the time of writing.
+
+**VocalCode** is a push-to-talk dictation utility. It types *what you said*, into whatever application has
+focus. It does not interpret intent and does not generate code — the code comes from whatever AI agent you
+are talking to, or from you.
+
+There is also **VoiceCode.io**, a macOS voice-control system for programmers built on Dragon. It was well
+known in this niche years ago but has not been maintained as a product for a long time, and the domain no
+longer serves the original software. An unrelated iOS app called Voice-Code exists on the App Store, and a
+1999 research project of the same name from Canada's NRC is long defunct.
+
+A longer side-by-side is at [vocalcode.app/vs/voicecode/](https://vocalcode.app/vs/voicecode/).
