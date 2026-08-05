@@ -4,7 +4,7 @@
 text lands wherever your cursor already is. Recognition runs on your own machine,
 in about 150 ms. Windows and macOS. One-time purchase, no subscription, no account.
 
-**[vocalcode.app](https://vocalcode.app/)** · [Download for Windows](https://vocalcode.app/VocalCodeSetup.exe) · [Download for macOS](https://vocalcode.app/VocalCode-0.4.19.dmg)
+**[vocalcode.app](https://vocalcode.app/)** · [Download for Windows](https://vocalcode.app/VocalCodeSetup.exe) · [Download for macOS](https://vocalcode.app/VocalCode-0.5.0.dmg)
 
 This is the public home for VocalCode's documentation and issue tracker. The
 application itself is closed-source; everything here is docs, answers, and a place
@@ -34,7 +34,7 @@ honest version:
 | **Claude Code `/voice`** | Anthropic's servers | No — only in Claude Code | Free, needs a Claude.ai account |
 | **Windows Voice Typing** | Microsoft's servers | Mostly | Free |
 | **Wispr Flow** | Cloud | Yes | Subscription |
-| **Superwhisper** | On device | Yes | macOS only |
+| **Superwhisper** | On device | Yes | Free tier; the better models are Pro |
 | **VocalCode** | On device | Yes | $4.99 once |
 
 Longer, sourced versions of each comparison — written by us, citing the other
@@ -43,13 +43,18 @@ product's own documentation:
 - [vs Claude Code's built-in `/voice`](https://vocalcode.app/vs/claude-code-voice/)
 - [vs Wispr Flow](https://vocalcode.app/vs/wispr-flow/)
 - [vs Handy](https://vocalcode.app/vs/handy/)
+- [vs VoiceCode](https://vocalcode.app/vs/voicecode/) — different tool, near-identical name
+- [A Superwhisper alternative for Windows](https://vocalcode.app/superwhisper-alternative-windows/)
+
+And the numbers behind the accuracy claims, with the method and the cases we lose:
+[vocalcode.app/benchmark](https://vocalcode.app/benchmark/).
 
 ## Facts
 
 | | |
 |---|---|
 | **Platforms** | Windows 10, Windows 11, macOS 11 or later |
-| **Current version** | 0.4.19 |
+| **Current version** | 0.5.0 |
 | **Price** | $4.99 one-time (launch price; regular $24.99) |
 | **Trial** | 30 days, full functionality |
 | **Recognition** | Entirely on your machine. No audio leaves it. Works with no network. |
@@ -79,7 +84,19 @@ before anything is typed:
 and run it. Per-user install, no admin required. On first launch you pick a
 language, and the matching model downloads.
 
-**macOS** — download [the .dmg](https://vocalcode.app/VocalCode-0.4.19.dmg), drag to
+**Windows, with [Scoop](https://scoop.sh/)** — the package is not in the Extras
+bucket (its maintainers judged it too new to meet their inclusion criteria), so it
+lives in a bucket here:
+
+```
+scoop bucket add vocalcode https://github.com/wudaming00/vocalcode-docs
+scoop install vocalcode
+```
+
+Scoop unpacks the installer rather than running it, and `scoop update vocalcode`
+follows the same `latest.json` the app's own updater does.
+
+**macOS** — download [the .dmg](https://vocalcode.app/VocalCode-0.5.0.dmg), drag to
 Applications. macOS will ask for **Accessibility** and **Input Monitoring**
 permission — both are required: the first lets VocalCode type into other apps, the
 second lets it see your push-to-talk key.
