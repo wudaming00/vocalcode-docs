@@ -2,18 +2,27 @@
 
 ## Does my voice go to a server?
 
-No. Speech recognition runs on your own machine, using models stored locally.
-Unplug the network and VocalCode still works. There is no account to sign in to
-and no transcript is ever uploaded.
+Speech recognition runs on your own machine, and recognition audio or transcripts
+are not uploaded. After the selected model downloads, recognition works without a
+network connection.
 
-The only network traffic VocalCode makes is: downloading a recognition model the
-first time you pick a language, checking `latest.json` for updates, and validating
-your license key when you activate.
+Other functions do connect: initial trial setup sends a stable pseudonymous device
+fingerprint and receives a signed device-bound receipt; model and update downloads;
+manual activation with a licence key and the same fingerprint; checkout polling with
+that fingerprint; and periodic validation of a paid licence before its 30-day signed
+receipt expires. None of those requests includes recognition audio or transcripts.
+Explicitly copying a History entry or enabling optional Paste text does use the
+system clipboard; clipboard-history or sync tools may retain that text even after
+VocalCode restores the previous clipboard.
+See the [privacy notice](https://vocalcode.app/privacy/) for the complete data flow.
 
 ## Is it a subscription?
 
-No. $4.99 once (launch price; the regular price is $24.99). One license covers up
-to 3 machines. There is a 30-day trial with everything enabled.
+No. The launch price is $4.99 once, plus applicable tax, with no recurring fee.
+One licence covers up to 3 devices. A paid licence periodically revalidates online,
+and updates within the current major version are included. There is a 30-day trial
+with everything enabled. Starting it requires one online request; its signed receipt
+is then checked offline.
 
 ## Which languages?
 
@@ -24,22 +33,29 @@ detecting automatically.
 
 ## Does it need a GPU?
 
-No. The default models run on CPU in roughly 150 ms. A GPU is not used and not
-required.
+No. The shipped recognition paths run on CPU; a GPU is not used or required.
+Responsiveness varies with hardware, audio length, language and model. VocalCode
+does not currently publish a quantitative latency promise.
 
-## Does it work in any application?
+## Does it work in every application?
 
-Yes. VocalCode types into whatever field has focus — your editor, a browser, a
-terminal, a chat window. It is not a browser extension and not tied to any one app.
+No system-wide injector works in every field. VocalCode types into the active text
+field in most desktop apps and is not tied to one editor. Windows cannot inject
+into a process running with higher administrator privileges. Password/secure
+fields, browser-rendered controls and some apps may reject synthetic input or
+prevent reliable target identification. macOS also requires Accessibility and Input
+Monitoring permission.
 
 ## How is it different from Claude Code's `/voice`?
 
-`/voice` is free, good, and the right tool when you are already inside Claude Code
-and happy to send audio to Anthropic's servers. It requires a Claude.ai account and
-is not available when Claude Code runs on an API key, Amazon Bedrock, or Google
-Vertex — and it only puts text into Claude Code's own prompt.
+`/voice` is included for supported Claude.ai accounts and does not consume messages
+or tokens. It is the direct choice when you are already inside Claude Code and are
+comfortable with cloud audio processing. It is unavailable when Claude Code runs
+on an API key, Amazon Bedrock, Google Cloud's Agent Platform or Microsoft Foundry,
+and it only puts text into Claude Code inputs.
 
-VocalCode runs locally, needs no account, and types into any application. The
+VocalCode recognition runs locally, needs no app account, and types into most
+desktop applications subject to the limitations above. The
 [full comparison](https://vocalcode.app/vs/claude-code-voice/) cites Anthropic's own
 documentation for every claim it makes about `/voice`.
 
@@ -58,21 +74,24 @@ or an F-key are the usual choices. Rebinding releases the old key.
 
 ## It typed a technical term wrong
 
-Use the replacement dictionary: a plain text file of `heard => desired` lines next
-to the application. It is case-insensitive, supports `#` comments, and is read live
-so you do not need to restart. This is the intended fix for project names, library
-names, and anything else no general model has heard of.
+Use the replacement dictionary in Settings: `heard => desired`, one rule per line.
+It is stored in VocalCode's per-user data directory, is case-insensitive, supports
+`#` comments, and applies Settings changes to the next utterance. If you edit the
+plain-text file directly, reopen VocalCode so the running engine reloads it. This
+is intended for project names, library names and other domain-specific terms.
 
 ## I changed the language and nothing happened
 
-Restart the app. The recognition model is constructed once at startup, so a
-language change takes effect on the next launch. The settings window says so when
-you change it.
+Give the app time to download and load the newly selected model. Language changes
+are applied while VocalCode is running; a restart is not required. If the status
+reports an error, check the model-download troubleshooting steps and log.
 
 ## Where do I get my license key back?
 
-https://vocalcode.app/thanks/ — enter the email you paid with. If that does not
-find it, mail **support@vocalcode.app**.
+https://vocalcode.app/thanks/ — enter the email you paid with. For privacy, the
+page gives the same response whether or not an address exists; if a matching
+purchase exists, the key is mailed to that address. If no message arrives, contact
+**support@vocalcode.app**.
 
 ## Is the installer signed?
 
@@ -88,13 +107,9 @@ No. They are unrelated products whose names are one letter apart, which causes r
 describe an edit in plain English and it writes the code, shown as a diff to accept. It supports VS Code,
 Cursor, Neovim, JetBrains and Zed, and is in private beta at the time of writing.
 
-**VocalCode** is a push-to-talk dictation utility. It types *what you said*, into whatever application has
-focus. It does not interpret intent and does not generate code — the code comes from whatever AI agent you
-are talking to, or from you.
-
-There is also **VoiceCode.io**, a macOS voice-control system for programmers built on Dragon. It was well
-known in this niche years ago but has not been maintained as a product for a long time, and the domain no
-longer serves the original software. An unrelated iOS app called Voice-Code exists on the App Store, and a
-1999 research project of the same name from Canada's NRC is long defunct.
+**VocalCode** is a push-to-talk dictation utility. It types *what you said* into the active field in most
+desktop apps. It does not interpret intent or generate code — the code comes from your AI agent or from you.
+It does not automatically read or index a project; the optional Teach command reads only text you explicitly
+select and stores the resulting replacement rule locally.
 
 A longer side-by-side is at [vocalcode.app/vs/voicecode/](https://vocalcode.app/vs/voicecode/).

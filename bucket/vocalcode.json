@@ -1,6 +1,6 @@
 {
-    "version": "0.5.0",
-    "description": "Push-to-talk voice input for coding with AI. Hold a key, talk, release — recognition runs on your own machine and the text lands in any app.",
+    "version": "1.0.0",
+    "description": "Push-to-talk voice input for coding with AI. Recognition runs on your machine and text is inserted into most desktop apps.",
     "homepage": "https://vocalcode.app/",
     "license": {
         "identifier": "Proprietary",
@@ -10,12 +10,16 @@
         "VocalCode is a paid app ($4.99 once) with a 30-day trial — everything is enabled during it.",
         "Run it once to choose a language; the matching speech model is downloaded then, so the",
         "installer itself ships without one and the first launch needs a network connection.",
-        "Accuracy numbers and the method behind them: https://vocalcode.app/benchmark/"
+        "The official installer is recommended on clean Windows systems because it can install Microsoft WebView2 when needed.",
+        "Model and measurement policy: https://vocalcode.app/benchmark/"
     ],
+    "suggest": {
+        "Microsoft Edge WebView2": "extras/webview2"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://vocalcode.app/VocalCodeSetup-0.5.0.exe",
-            "hash": "5ee8dfba566356a92714a2ba0cc5124e54abb2307045c49b6718b7449248cbc7"
+            "url": "https://vocalcode.app/VocalCodeSetup-1.0.0.exe",
+            "hash": "ae5c2da76af4ebd9c911e7d01cc17b09d5ff2ed927cf3a8298436ded8966803c"
         }
     },
     "innosetup": true,

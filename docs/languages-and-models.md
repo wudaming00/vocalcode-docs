@@ -4,9 +4,9 @@
 
 | Language group | Model | Notes |
 |---|---|---|
-| English + 24 other European languages | **Parakeet TDT v3** (NVIDIA, via sherpa-onnx) | Fast on CPU. No Chinese. |
+| English + 24 other European languages | **Parakeet TDT v3** (NVIDIA, via sherpa-onnx) | CPU recognition; no Chinese. Emits its own punctuation. |
 | Chinese | **Paraformer** | Bilingual zh/en, simplified output. |
-| — | **CT-Transformer punctuation** | Runs on the recognized text, both language groups. |
+| Paraformer path only | **CT-Transformer punctuation** | Restores punctuation after Paraformer recognition. |
 
 Models are **not** bundled in the installer. You pick a language on first run and
 the matching model downloads then. That keeps the download small and means you do
@@ -23,38 +23,47 @@ side of the threshold, and the engine would switch between utterances. Sometimes
 picked wrong and produced confident nonsense — Parakeet, given Chinese audio, does
 not return nothing, it returns plausible English.
 
-An engine that is right 95% of the time and silently wrong the rest is worse than
-one that asks a question once. So it asks once, and if the setting is missing or
-unrecognized it asks again rather than guessing.
+Silent routing errors are harder to notice than an explicit choice. VocalCode asks
+once and, if the saved setting is missing or unrecognized, asks again rather than
+guessing.
 
-Changing the language later takes effect on the next launch, because the recognition
-model is constructed once at startup.
+Changing the language later downloads (if necessary) and loads the selected model
+while VocalCode is running; a restart is not required.
 
 ## Why not one big multilingual model
 
-Whisper large-v3 is excellent and was tried. On CPU without CUDA it is unusably
-slow, and the prebuilt runtime we ship has no CUDA path. Whisper base is fast but
-drops content in Chinese. So the current pair — a fast European model and a fast
-Chinese model — beats one general model at the sizes that actually run on a laptop.
+The release deliberately has two audited model paths rather than promising that one
+model performs equally across all languages. The shipped runtime is CPU-only. We do
+not currently publish quantitative accuracy or latency comparisons; the
+[measurement policy](https://vocalcode.app/benchmark/) lists the evidence required
+before such a claim can be published.
 
 ## Languages that were built and then withdrawn
 
-Japanese, Korean, Thai, Vietnamese, Russian and Cantonese were wired up and then
-pulled before release. The Japanese model returned only the content after the final
-pause — say two sentences, lose the first — which is a structural problem with how
-that model segments, not a tuning knob.
+Japanese, Korean, Thai, Vietnamese, Russian and Cantonese are not offered by this
+release. Old or unknown model identifiers fail before download, and their dormant
+objects are not served from the model CDN.
 
-The rule applied: **no language ships until a native speaker has verified it.** A
-language that half-works is worse than one that is absent, because the person who
-needs it has already paid by the time they find out.
-
-Some models were also excluded on licensing grounds rather than quality. A model
-under a bespoke, non-Apache/MIT license is not usable in a paid product regardless
-of how well it performs.
+Model inclusion requires documented provenance, integrity hashes, a licence that
+permits commercial redistribution, and an evaluation suitable for the claimed
+scope. A model is excluded when any of those conditions is missing; adding a
+download route is not enough.
 
 ## Where models come from
 
-Models are served from VocalCode's own storage rather than hot-linked from a
-third-party host, so a model that works today keeps working. The registry has a test
-asserting that every model URL points at our own domain — an upstream host quietly
-returning 401 has broken this kind of thing before.
+Models are served from VocalCode's own storage rather than hot-linked at runtime.
+The registry pins the expected size and SHA-256 for every offered object and rejects
+a mismatched download before use.
+
+- **Parakeet TDT v3:** derived from
+  [`nvidia/parakeet-tdt-0.6b-v3`](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3)
+  (CC BY 4.0) through the pinned sherpa-onnx conversion identified in the release
+  notices.
+- **Paraformer:** the pinned sherpa-onnx conversion of
+  [`iic/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-onnx`](https://www.modelscope.cn/models/iic/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-onnx)
+  (Apache 2.0).
+- **CT-Transformer punctuation:** the pinned sherpa-onnx conversion used only by
+  the Paraformer path (Apache 2.0).
+
+Exact revisions, hashes, attribution and licence texts ship with the application in
+`THIRD-PARTY-NOTICES.txt` and `THIRD-PARTY-LICENSES`.
