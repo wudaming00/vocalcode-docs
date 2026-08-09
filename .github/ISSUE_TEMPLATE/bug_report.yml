@@ -1,0 +1,63 @@
+name: Bug report
+description: Report reproducible behavior in the current VocalCode release
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve VocalCode. Do not include a licence key, receipt, email address, or unreviewed log.
+  - type: input
+    id: version
+    attributes:
+      label: VocalCode version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS 15
+        - macOS 14
+        - macOS 13 or earlier
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the target app and selected language/model when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log lines
+      description: Review and remove usernames, local paths, email addresses, hardware identifiers, and unrelated information first.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I tested the current production release.
+          required: true
+        - label: I removed private information and licence data from this report.
+          required: true

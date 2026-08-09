@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Purchases, licence keys and refunds
+    url: mailto:support@vocalcode.app
+    about: Keep purchase and licence information out of public issues.
+  - name: Security or privacy report
+    url: mailto:support@vocalcode.app
+    about: Report suspected vulnerabilities privately.
