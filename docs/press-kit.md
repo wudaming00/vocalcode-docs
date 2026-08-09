@@ -41,6 +41,7 @@ is in the [privacy notice](https://vocalcode.app/privacy/).
 - Windows download: <https://vocalcode.app/VocalCodeSetup.exe>
 - macOS download: <https://vocalcode.app/VocalCode-1.0.0.dmg>
 - Documentation and issue tracker: <https://github.com/wudaming00/vocalcode-docs>
+- Homebrew tap: <https://github.com/wudaming00/homebrew-vocalcode>
 - Measurement policy: <https://vocalcode.app/benchmark/>
 - Privacy notice: <https://vocalcode.app/privacy/>
 - Machine-readable PAD: <https://vocalcode.app/vocalcode.xml>

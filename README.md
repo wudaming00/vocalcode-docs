@@ -107,6 +107,17 @@ and drag it to Applications. VocalCode requests **Microphone**, **Accessibility*
 and **Input Monitoring**. They provide audio capture, configured talk-control
 detection, focused-target checks and local insertion through native macOS input events.
 
+**macOS, with [Homebrew](https://brew.sh/):** install the cask from VocalCode's
+official upstream tap:
+
+```sh
+brew install --cask wudaming00/vocalcode/vocalcode
+```
+
+The tap is public at
+[wudaming00/homebrew-vocalcode](https://github.com/wudaming00/homebrew-vocalcode)
+and its cask audit and live-version check run on macOS for every change.
+
 Updates are checked against [latest.json](https://vocalcode.app/latest.json). On
 Windows, the one-click updater verifies both the file hash and the installer's
 Authenticode signature before running anything.
