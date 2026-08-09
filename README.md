@@ -4,6 +4,7 @@
 [![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows)](https://vocalcode.app/VocalCodeSetup.exe)
 [![Apple silicon](https://img.shields.io/badge/macOS-Apple%20silicon-111111?logo=apple)](https://vocalcode.app/VocalCode-1.0.0.dmg)
 [![On-device recognition](https://img.shields.io/badge/speech-on--device-FF974D)](https://vocalcode.app/privacy/)
+[![Approved on SaaSHub](https://cdn-b.saashub.com/img/badges/approved-color.png?v=1)](https://www.saashub.com/vocalcode?utm_source=badge&utm_campaign=badge&utm_content=vocalcode&badge_variant=color&badge_kind=approved)
 
 **Push-to-talk voice input for coding with AI.** Hold a key, talk, release — clean
 text lands in the active field in most desktop apps. Recognition runs on your own
@@ -130,5 +131,6 @@ posting them publicly.
 ## Contact
 
 - Issues and feature requests: [this repository's issues](https://github.com/wudaming00/vocalcode-docs/issues)
+- Questions and launch feedback: [GitHub Discussions](https://github.com/wudaming00/vocalcode-docs/discussions)
 - Purchases, licenses, refunds: **support@vocalcode.app**
 - Lost your license key: [recover it here](https://vocalcode.app/thanks/)
