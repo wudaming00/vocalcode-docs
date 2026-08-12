@@ -2,7 +2,7 @@
 
 [![Latest release](https://img.shields.io/github/v/release/wudaming00/vocalcode-docs?label=release)](https://github.com/wudaming00/vocalcode-docs/releases/latest)
 [![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows)](https://vocalcode.app/VocalCodeSetup.exe)
-[![Apple silicon](https://img.shields.io/badge/macOS-Apple%20silicon-111111?logo=apple)](https://vocalcode.app/VocalCode-1.0.0.dmg)
+[![Apple silicon](https://img.shields.io/badge/macOS-Apple%20silicon-111111?logo=apple)](https://vocalcode.app/)
 [![On-device recognition](https://img.shields.io/badge/speech-on--device-FF974D)](https://vocalcode.app/privacy/)
 [![Approved on SaaSHub](https://cdn-b.saashub.com/img/badges/approved-color.png?v=1)](https://www.saashub.com/vocalcode?utm_source=badge&utm_campaign=badge&utm_content=vocalcode&badge_variant=color&badge_kind=approved)
 
@@ -11,10 +11,11 @@ text lands in the active field in most desktop apps. Recognition runs on your ow
 machine after the selected model downloads. Windows 10/11 (64-bit) and macOS 11+
 on Apple silicon. $4.99 once, plus applicable tax; no subscription or app account.
 
-**[vocalcode.app](https://vocalcode.app/)** · [Download for Windows](https://vocalcode.app/VocalCodeSetup.exe) · [Download for macOS](https://vocalcode.app/VocalCode-1.0.0.dmg)
+**[Official website: vocalcode.app](https://vocalcode.app/)** · [Download for Windows](https://vocalcode.app/VocalCodeSetup.exe) · [Get the current macOS build](https://vocalcode.app/)
 
 ![VocalCode — push-to-talk voice input for AI coding](https://vocalcode.app/og.png)
 
+VocalCode is developed and published by [Daming Wu](https://github.com/wudaming00).
 This is the public home for VocalCode's documentation and issue tracker. The
 application itself is closed-source; everything here is docs, answers, and a place
 to file bugs.
@@ -59,7 +60,7 @@ quantitative accuracy, latency or competitor scorecard.
 | | |
 |---|---|
 | **Platforms** | Windows 10/11 (64-bit); macOS 11+ on Apple silicon (arm64) |
-| **Current version** | 1.0.0 |
+| **Current version** | Published in the official [release metadata](https://vocalcode.app/latest.json) |
 | **Price** | $4.99 one-time launch price, plus applicable tax; no subscription |
 | **Trial** | 30 days, full functionality. Initial setup needs one online request with a stable pseudonymous device fingerprint; the signed receipt is then checked offline. |
 | **Recognition** | On your machine; no recognition audio or transcript is uploaded. Works offline after model download. |
@@ -98,11 +99,12 @@ scoop bucket add vocalcode https://github.com/wudaming00/vocalcode-docs
 scoop install vocalcode
 ```
 
-The manifest follows the signed, versioned installer published for 1.0.0. The
+The manifest follows the current signed, versioned installer. The
 official installer above remains the simplest path on a clean Windows machine
 because it can install Microsoft's WebView2 Runtime when Windows does not have it.
 
-**macOS** — download [the Apple-silicon .dmg](https://vocalcode.app/VocalCode-1.0.0.dmg)
+**macOS** — get the current Apple-silicon `.dmg` from the
+[official website](https://vocalcode.app/)
 and drag it to Applications. VocalCode requests **Microphone**, **Accessibility**
 and **Input Monitoring**. They provide audio capture, configured talk-control
 detection, focused-target checks and local insertion through native macOS input events.

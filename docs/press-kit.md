@@ -20,7 +20,7 @@ dictating prompts, documentation and other prose while coding.
 
 | | |
 |---|---|
-| Current release | 1.0.0 (August 9, 2026) |
+| Current release | See the official [release metadata](https://vocalcode.app/latest.json) |
 | Platforms | Windows 10/11 x64; macOS 11+ on Apple silicon |
 | Price | $4.99 one time, plus applicable tax; no subscription |
 | Trial | 30 days with all features enabled |
@@ -28,7 +28,7 @@ dictating prompts, documentation and other prose while coding.
 | Languages | English and 24 other European language preferences; Mandarin Chinese |
 | Models | Parakeet TDT v3; Paraformer with local CT-Transformer punctuation |
 | Signing | Authenticode-signed Windows installer; signed and notarized macOS app |
-| Publisher | Daming Wu |
+| Developer and publisher | [Daming Wu](https://github.com/wudaming00) |
 | Support | support@vocalcode.app |
 
 Initial trial provisioning, model and update downloads, checkout, activation and
@@ -38,8 +38,10 @@ is in the [privacy notice](https://vocalcode.app/privacy/).
 ## Official links
 
 - Website: <https://vocalcode.app/>
+- Developer: Daming Wu — <https://github.com/wudaming00>
+- Current release metadata: <https://vocalcode.app/latest.json>
 - Windows download: <https://vocalcode.app/VocalCodeSetup.exe>
-- macOS download: <https://vocalcode.app/VocalCode-1.0.0.dmg>
+- macOS download: use the current Apple-silicon link at <https://vocalcode.app/>
 - Documentation and issue tracker: <https://github.com/wudaming00/vocalcode-docs>
 - Homebrew tap: <https://github.com/wudaming00/homebrew-vocalcode>
 - Measurement policy: <https://vocalcode.app/benchmark/>
