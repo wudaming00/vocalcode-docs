@@ -1,6 +1,6 @@
 # VocalCode
 
-[![Latest release](https://img.shields.io/github/v/release/wudaming00/vocalcode-docs?label=release)](https://github.com/wudaming00/vocalcode-docs/releases/latest)
+[![Latest release](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fvocalcode.app%2Flatest.json&query=%24.version&label=release)](https://vocalcode.app/latest.json)
 [![Windows 10/11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows)](https://vocalcode.app/VocalCodeSetup.exe)
 [![Apple silicon](https://img.shields.io/badge/macOS-Apple%20silicon-111111?logo=apple)](https://vocalcode.app/)
 [![On-device recognition](https://img.shields.io/badge/speech-on--device-FF974D)](https://vocalcode.app/privacy/)
