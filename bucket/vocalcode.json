@@ -1,53 +1,53 @@
 {
-    "version": "1.0.0",
-    "description": "Push-to-talk voice input for coding with AI. Recognition runs on your machine and text is inserted into most desktop apps.",
-    "homepage": "https://vocalcode.app/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://vocalcode.app/"
-    },
-    "notes": [
-        "VocalCode is a paid app ($4.99 once) with a 30-day trial — everything is enabled during it.",
-        "Run it once to choose a language; the matching speech model is downloaded then, so the",
-        "installer itself ships without one and the first launch needs a network connection.",
-        "The official installer is recommended on clean Windows systems because it can install Microsoft WebView2 when needed.",
-        "Model and measurement policy: https://vocalcode.app/benchmark/"
-    ],
-    "suggest": {
-        "Microsoft Edge WebView2": "extras/webview2"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://vocalcode.app/VocalCodeSetup-1.0.0.exe",
-            "hash": "ae5c2da76af4ebd9c911e7d01cc17b09d5ff2ed927cf3a8298436ded8966803c"
-        }
-    },
-    "innosetup": true,
-    "bin": "VocalCode.exe",
-    "shortcuts": [
-        [
-            "VocalCode.exe",
-            "VocalCode"
-        ]
-    ],
-    "persist": [
-        "models",
-        "vocalcode.toml",
-        "replacements.txt"
-    ],
-    "checkver": {
-        "url": "https://vocalcode.app/latest.json",
-        "jsonpath": "$.windows.version"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://vocalcode.app/VocalCodeSetup-$version.exe"
-            }
-        },
-        "hash": {
-            "url": "https://vocalcode.app/latest.json",
-            "jsonpath": "$.windows.sha256"
-        }
-    }
+    "version":  "1.0.9",
+    "description":  "Push-to-talk voice input for coding with AI. Recognition runs on your machine and text is inserted into most desktop apps.",
+    "homepage":  "https://vocalcode.app/",
+    "license":  {
+                    "identifier":  "Proprietary",
+                    "url":  "https://vocalcode.app/"
+                },
+    "notes":  [
+                  "VocalCode is a paid app ($4.99 once) with a 30-day trial — everything is enabled during it.",
+                  "Run it once to choose a language; the matching speech model is downloaded then, so the",
+                  "installer itself ships without one and the first launch needs a network connection.",
+                  "The official installer is recommended on clean Windows systems because it can install Microsoft WebView2 when needed.",
+                  "Model and measurement policy: https://vocalcode.app/benchmark/"
+              ],
+    "suggest":  {
+                    "Microsoft Edge WebView2":  "extras/webview2"
+                },
+    "architecture":  {
+                         "64bit":  {
+                                       "url":  "https://github.com/wudaming00/vocalcode-docs/releases/download/v1.0.9/VocalCodeSetup-1.0.9.exe",
+                                       "hash":  "d38ac428abd8735dc29e961bdbefd4e02c18290bad4f0a6eee30f28bc2ed10d9"
+                                   }
+                     },
+    "innosetup":  true,
+    "bin":  "VocalCode.exe",
+    "shortcuts":  [
+                      [
+                          "VocalCode.exe",
+                          "VocalCode"
+                      ]
+                  ],
+    "persist":  [
+                    "models",
+                    "vocalcode.toml",
+                    "replacements.txt"
+                ],
+    "checkver":  {
+                     "url":  "https://vocalcode.app/latest.json",
+                     "jsonpath":  "$.windows.version"
+                 },
+    "autoupdate":  {
+                       "architecture":  {
+                                            "64bit":  {
+                                                          "url":  "https://vocalcode.app/VocalCodeSetup-$version.exe"
+                                                      }
+                                        },
+                       "hash":  {
+                                    "url":  "https://vocalcode.app/latest.json",
+                                    "jsonpath":  "$.windows.sha256"
+                                }
+                   }
 }
