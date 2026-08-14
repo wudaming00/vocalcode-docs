@@ -4,10 +4,17 @@ Reviewed product facts and media links for journalists, software directories and
 independent reviewers. Please link to the official website when referencing the
 product and test current builds before making performance claims.
 
+## Brand name
+
+The official spelling is **VocalCode**. **Vocal Code** is a spaced rendering of
+the same product name. On first reference, directories and reviewers may write
+“VocalCode (Vocal Code),” followed by “VocalCode.” The canonical product URL is
+<https://vocalcode.app/>.
+
 ## One-line description
 
-VocalCode is local push-to-talk dictation for AI coding on Windows and Apple
-silicon macOS.
+VocalCode (Vocal Code) is local push-to-talk dictation for AI coding on Windows
+and Apple silicon macOS.
 
 ## Short description
 

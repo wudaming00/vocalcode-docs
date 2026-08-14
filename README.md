@@ -6,7 +6,7 @@
 [![On-device recognition](https://img.shields.io/badge/speech-on--device-FF974D)](https://vocalcode.app/privacy/)
 [![Approved on SaaSHub](https://cdn-b.saashub.com/img/badges/approved-color.png?v=1)](https://www.saashub.com/vocalcode?utm_source=badge&utm_campaign=badge&utm_content=vocalcode&badge_variant=color&badge_kind=approved)
 
-**Push-to-talk voice input for coding with AI.** Hold a key, talk, release — clean
+**VocalCode (also written Vocal Code) is push-to-talk voice input for coding with AI.** Hold a key, talk, release — clean
 text lands in the active field in most desktop apps. Recognition runs on your own
 machine after the selected model downloads. Windows 10/11 (64-bit) and macOS 11+
 on Apple silicon. $4.99 once, plus applicable tax; no subscription or app account.
