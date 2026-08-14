@@ -38,4 +38,3 @@ Documentation: https://github.com/wudaming00/vocalcode-docs
 Record a clean 1920 × 1080 or 2560 × 1440 desktop at 30 or 60 fps. Hide personal
 notifications, licence keys, email addresses, terminal secrets, and unrelated
 browser tabs. Use a current signed release with a valid trial or licence state.
-
