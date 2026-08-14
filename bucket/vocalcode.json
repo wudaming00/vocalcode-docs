@@ -1,5 +1,5 @@
 {
-    "version":  "1.0.9",
+    "version":  "1.0.11",
     "description":  "Push-to-talk voice input for coding with AI. Recognition runs on your machine and text is inserted into most desktop apps.",
     "homepage":  "https://vocalcode.app/",
     "license":  {
@@ -18,8 +18,8 @@
                 },
     "architecture":  {
                          "64bit":  {
-                                       "url":  "https://github.com/wudaming00/vocalcode-docs/releases/download/v1.0.9/VocalCodeSetup-1.0.9.exe",
-                                       "hash":  "d38ac428abd8735dc29e961bdbefd4e02c18290bad4f0a6eee30f28bc2ed10d9"
+                                       "url":  "https://github.com/wudaming00/vocalcode-docs/releases/download/v1.0.11/VocalCodeSetup-1.0.11.exe",
+                                       "hash":  "f23f169411eef6a9b97b9bced9b1f15a4fdcdb970be5d0ff2253a277a3b2a5cb"
                                    }
                      },
     "innosetup":  true,
