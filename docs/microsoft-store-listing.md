@@ -46,13 +46,14 @@ $4.99 once, plus applicable tax, with no subscription.
 ## Prepared asset
 
 - 300 × 300 tile: [`media/microsoft-store/tile-300x300.png`](../media/microsoft-store/tile-300x300.png)
+- 1600 × 900 Home: [`01-home-1600x900.png`](../media/microsoft-store/01-home-1600x900.png)
+- 1600 × 900 Shortcuts: [`02-shortcuts-1600x900.png`](../media/microsoft-store/02-shortcuts-1600x900.png)
+- 1600 × 900 Language and model: [`03-language-model-1600x900.png`](../media/microsoft-store/03-language-model-1600x900.png)
+- 1600 × 900 Settings: [`04-settings-1600x900.png`](../media/microsoft-store/04-settings-1600x900.png)
 
 ## Still required before submission
 
 - Reserve the product identity in Partner Center.
-- Capture at least four clean, current 16:9 app screenshots at 1366 × 768 or
-  larger. Do not use images showing an expired trial, invalid licence, old
-  version number, or development error.
 - Verify the EXE/MSI installer URL, silent install behavior, version detection,
   certification requirements, markets, age ratings, and current pricing in
   Partner Center.
