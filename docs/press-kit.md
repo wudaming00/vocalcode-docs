@@ -59,6 +59,8 @@ is in the [privacy notice](https://vocalcode.app/privacy/).
 
 - Product mark: <https://vocalcode.app/mark.png>
 - Social/feature image (1200 × 630): <https://vocalcode.app/og.png>
+- Downloadable press kit: <https://github.com/wudaming00/vocalcode-docs/releases/download/v1.0.9/VocalCode-press-kit.zip>
+- Product Hunt gallery and launch copy: [product-hunt-launch.md](product-hunt-launch.md)
 
 Directories may list VocalCode and redistribute the unmodified official installer.
 The installer may not be repackaged, bundled with unrelated software or wrapped in
