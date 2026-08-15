@@ -11,7 +11,7 @@ text lands in the active field in most desktop apps. Recognition runs on your ow
 machine after the selected model downloads. Windows 10/11 (64-bit) and macOS 11+
 on Apple silicon. $4.99 once, plus applicable tax; no subscription or app account.
 
-**[Official website: vocalcode.app](https://vocalcode.app/)** · [Download for Windows](https://vocalcode.app/VocalCodeSetup.exe) · [Get the current macOS build](https://vocalcode.app/)
+**[Official website: vocalcode.app](https://vocalcode.app/)** · [Download for Windows](https://vocalcode.app/VocalCodeSetup.exe) · [Get the current macOS build](https://vocalcode.app/) · [All install channels](https://vocalcode.app/download/)
 
 ![VocalCode — push-to-talk voice input for AI coding](https://vocalcode.app/og.png)
 
@@ -91,6 +91,14 @@ ships the reviewed Microsoft Visual C++ runtime beside VocalCode and installs th
 signed WebView2 runtime per-user when it is absent. On first launch you pick a
 language, and the matching model downloads.
 
+**Windows, with [winget](https://learn.microsoft.com/windows/package-manager/):**
+VocalCode is in the Windows Package Manager community repository as
+[`DamingWu.VocalCode`](https://github.com/microsoft/winget-pkgs/tree/master/manifests/d/DamingWu/VocalCode):
+
+```powershell
+winget install DamingWu.VocalCode
+```
+
 **Windows, with [Scoop](https://scoop.sh/):** VocalCode is currently distributed
 through this repository's own bucket while the app is too new for Scoop Extras:
 
@@ -129,7 +137,7 @@ Authenticode signature before running anything.
 - [FAQ](docs/faq.md)
 - [Troubleshooting](docs/troubleshooting.md) — including where the log file lives
 - [Languages and models](docs/languages-and-models.md)
-- [Press and directory kit](docs/press-kit.md) — reviewed descriptions, product facts and media links
+- [Press and directory kit](docs/press-kit.md) — reviewed descriptions, product facts and media links; the web press kit with logo and product images is at [vocalcode.app/press/](https://vocalcode.app/press/)
 
 ## Reporting a bug
 
